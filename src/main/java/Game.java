@@ -20,17 +20,24 @@ public class Game {
         
         // TODO Create character by collecting user input (name + role.
 
+
+
         // TODO Print character sheet.
 
         // Start the adventure.
-        printDramaticText("Our adventure begins in a shady tavern ...");
+        // printDramaticText("Our adventure begins in a shady tavern ...");
 
         // Roll a d20
-        System.out.print("Press Enter to roll a d20.");
+        System.out.print("Press Enter to roll a d6.");
         scanner.nextLine();
 
-        int roll = (int)(Math.random() * 20) + 1;
+        int roll = (int)(Math.random() * 6) + 1;
         Ascii.drawD20(roll);
+
+        if(roll == 1 || roll == 2) {
+            printDramaticText("This is scenario 1");
+        }
+         xx
 
         // TODO Continue ...
     }

@@ -12,7 +12,7 @@ public class Player {
     }
 
     public void attack() {
-        System.out.println(this.name + " the" + this.role + " attacks!")
+        System.out.println(this.name + " the" + this.role + " attacks!");
     }
 
 }
