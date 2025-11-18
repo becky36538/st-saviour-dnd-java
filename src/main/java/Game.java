@@ -27,6 +27,8 @@ public class Game {
         // Start the adventure.
         // printDramaticText("Our adventure begins in a shady tavern ...");
 
+        printDramaticText("Our adventure begins in an empty, green, dark maze");
+        printDramaticText("Use right, left, up, or down to escape");
         // Roll a d20
         System.out.print("Press Enter to roll a d6.");
         scanner.nextLine();
@@ -37,7 +39,7 @@ public class Game {
         if(roll == 1 || roll == 2) {
             printDramaticText("This is scenario 1");
         }
-         xx
+        
 
         // TODO Continue ...
     }
