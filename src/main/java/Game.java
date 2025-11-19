@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -24,6 +25,14 @@ public class Game {
         printDramaticText("Our adventure begins in an empty, green, dark maze");
         printDramaticText("A hungry Labubu has awoken, and is searching for you as a meal");
         printDramaticText("Use right, left, up, or down to escape");
+
+        List<String> solution = Arrays.asList(
+            "up", "right", "up", "right", "right"
+       , "down", "right", "down" )
+       System.out.println("up, left, down, right")
+       System.out.println("enter your moves separated by commas");
+
+
         // Roll a d20
         // System.out.print("Press Enter to roll a d6.");
         // scanner.nextLine();
