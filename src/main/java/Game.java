@@ -26,12 +26,21 @@ public class Game {
         printDramaticText("A hungry Labubu has awoken, and is searching for you as a meal");
         printDramaticText("Use right, left, up, or down to escape");
 
-        List<String> solution = Arrays.asList(
+        List solution = Arrays.asList(
             "up", "right", "up", "right", "right"
        , "down", "right", "down" )
        System.out.println("up, left, down, right")
        System.out.println("enter your moves separated by commas");
+       System.out.print("Your attempt:");
 
+       List moves = Arrays.stream(input.split(",")); {
+       if (moves.uqeals(solution))
+            System.out.println("You've successfully escaped the hungry Labubu!");
+            System.out.println("+100 matcha bonus");
+       } else {
+            System.out.println("You've been eaten by the hungry Labubu");
+            System.out.println("-10,000 matcha");
+       }
 
         // Roll a d20
         // System.out.print("Press Enter to roll a d6.");
