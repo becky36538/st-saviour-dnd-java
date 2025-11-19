@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -26,11 +27,26 @@ public class Game {
         printDramaticText("A hungry Labubu has awoken, and is searching for you as a meal");
         printDramaticText("Use right, left, up, or down to escape");
 
-        List solution = Arrays.asList(
-            "up", "right", "up", "right", "right"
-       , "down", "right", "down" )
+        String[] solution = new String[]{"up", "right", "up", "right", 
+            "right", "down", "right", "down"};
+
+        int i = 0;
+        while(i < solution.length) {
+            System.out.println("enter your move: ");
+            String move = scanner.nextLine();
+
+            if(move.equals(solution[i])) {
+                printDramaticText("Nice move ...");
+            } else {
+                printDramaticText("The Labubu devours your soul!");
+                break;
+            }
+
+            i += 1;
+        }
+
        System.out.println("up, left, down, right")
-       System.out.println("enter your moves separated by commas");
+       
        System.out.print("Your attempt:");
 
        List moves = Arrays.stream(input.split(",")); {
