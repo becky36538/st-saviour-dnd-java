@@ -29,20 +29,30 @@ public class Game {
         // int i begins at 0 to correspond with the user's answers and the solution
         int i = 0;
         // boolean is a type for true or false
+        // if the result of the game is a win, then the boolean value "win" is true
         boolean win = true;
+        // while loop will keep the loop going whereas for loop would need to be repeated for the code to run properly
         while(i < solution.length) {
-            System.out.println("enter your move: ");
+            // instructions printed to tell the player to enter the move
+            System.out.println("Enter your move: ");
+            // scanner nextline prints the space for the player to input their answer/decision
             String move = scanner.nextLine();
+            // if the move given by the player is equal to the position corresponding to the move, then it will print "Smart choice!"
             if(move.equals(solution[i])) {
-                printDramaticText("Nice move ...");
+                printDramaticText("Smart choice!");
             } else {
+                // if the move given by the player is not the position corresponding to the move, then it will print "The Labubu devours your soul!"
                 printDramaticText("The Labubu devours your soul!");
+                // the boolean value "win" would be false, resulting in losing the game
                 win = false;
+                // a break is needed to prevent an infinite loop
                 break;
             }
+            // the position increments by 1
             i += 1;
         }
         if (win) {
+            // if the player wins, then the text will print at the end
             printDramaticText("You've escaped the Labubu! +100 matcha!");
         } 
 
