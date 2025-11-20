@@ -18,22 +18,21 @@ public class Game {
 
         System.out.println("Your name is " + name + " and your role is " + role + ".");
         
-        // TODO Create character by collecting user input (name + role.
-        // use dramatic text to give instructions to user
+        // use dramatic text to give instructions to user on how to play the game
 
         printDramaticText("Our adventure begins in an empty, green, dark maze");
         printDramaticText("A hungry Labubu has awoken, and is searching for you as a meal");
         printDramaticText("Use right, left, up, or down to escape");
-
+        // the directions to move in the maze are listed in a string called "solution" =, stored in the data
         String[] solution = new String[]{"up", "right", "up", "right", 
             "right", "down", "right", "down"};
-
+        // int i begins at 0 to correspond with the user's answers and the solution
         int i = 0;
+        // boolean is a type for true or false
         boolean win = true;
         while(i < solution.length) {
             System.out.println("enter your move: ");
             String move = scanner.nextLine();
-
             if(move.equals(solution[i])) {
                 printDramaticText("Nice move ...");
             } else {
@@ -41,10 +40,8 @@ public class Game {
                 win = false;
                 break;
             }
-
             i += 1;
         }
-
         if (win) {
             printDramaticText("You've escaped the Labubu! +100 matcha!");
         } 
