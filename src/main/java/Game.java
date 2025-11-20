@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -31,6 +29,7 @@ public class Game {
             "right", "down", "right", "down"};
 
         int i = 0;
+        boolean win = true;
         while(i < solution.length) {
             System.out.println("enter your move: ");
             String move = scanner.nextLine();
@@ -39,24 +38,29 @@ public class Game {
                 printDramaticText("Nice move ...");
             } else {
                 printDramaticText("The Labubu devours your soul!");
+                win = false;
                 break;
             }
 
             i += 1;
         }
 
-       System.out.println("up, left, down, right")
-       
-       System.out.print("Your attempt:");
+        if (win) {
+            printDramaticText("You've escaped the Labubu! +100 matcha!");
+        } 
 
-       List moves = Arrays.stream(input.split(",")); {
-       if (moves.uqeals(solution))
-            System.out.println("You've successfully escaped the hungry Labubu!");
-            System.out.println("+100 matcha bonus");
-       } else {
-            System.out.println("You've been eaten by the hungry Labubu");
-            System.out.println("-10,000 matcha");
-       }
+    //    System.out.println("up, left, down, right");
+       
+    //    System.out.print("Your attempt:");
+
+    //    List moves = Arrays.stream(input.split(",")); {
+    //    if (moves.uqeals(solution))
+    //         System.out.println("You've successfully escaped the hungry Labubu!");
+    //         System.out.println("+100 matcha bonus");
+    //    } else {
+    //         System.out.println("You've been eaten by the hungry Labubu");
+    //         System.out.println("-10,000 matcha");
+    //    }
 
         // Roll a d20
         // System.out.print("Press Enter to roll a d6.");

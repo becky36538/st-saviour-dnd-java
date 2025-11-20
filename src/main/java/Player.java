@@ -3,9 +3,6 @@ public class Player {
     public String name;
     public String role;
 
-    public int dexterity;
-    public int charisma;
-
     public Player(String name, String role) {
         this.name = name;
         this.role = role;
